@@ -1,8 +1,8 @@
 
 .cache/
 coverage/
-dist/*
-!dist/index.html
+docs/*
+!docs/index.html
 node_modules/
 *.log
 
