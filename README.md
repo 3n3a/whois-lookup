@@ -22,8 +22,15 @@ To create a development build:
 npm run build-dev
 ```
 
-## Running
+## Development Mode
 
 ```sh
-node dist/bundle.js
+npm run dev
+```
+
+
+## Production Mode
+
+``sh
+npm run prod
 ```
