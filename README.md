@@ -31,6 +31,6 @@ npm run dev
 
 ## Production Mode
 
-``sh
+```sh
 npm run prod
 ```
