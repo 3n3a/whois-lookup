@@ -17,9 +17,9 @@ function btn(name, callback, e=app) {
     })
 }
 
-function input(name, description, placeholder, e=app) {
+function input(name, description, placeholder, e=app, type="text") {
     e.insertAdjacentHTML('beforeend', `<label for="${name}" >${description}</label>`)
-    e.insertAdjacentHTML('beforeend', `<input type="text" name="${name}" value="${placeholder}" id="${name}" required></button>`)
+    e.insertAdjacentHTML('beforeend', `<input type="${type}" name="${name}" value="${placeholder}" id="${name}" required></button>`)
 }
 
 function div(classes, e=app) {
@@ -43,8 +43,8 @@ function calc_working_time(start_time_id, end_time_id, break_time_id) {
 
 let d = div("container")
 h(1, "Calculate your working Hours", d)
-input("time1", "Enter Starting Time", "8:00", d)
-input("time2", "Enter Ending Time", "17:00", d)
+input("time1", "Enter Starting Time", "8:00", d, "time")
+input("time2", "Enter Ending Time", "17:00", d, "time")
 input("break", "Enter Breaktime (mins)", "45", d)
 btn("Calculate Working Time", function () {
     let working_time = calc_working_time('time1', 'time2', 'break')
