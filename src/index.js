@@ -45,7 +45,7 @@ let d = div("container")
 h(1, "Calculate your working Hours", d)
 input("time1", "Enter Starting Time", "07:30", d, "time")
 input("time2", "Enter Ending Time", "17:00", d, "time")
-input("break", "Enter Breaktime (mins)", "30", d)
+input("break", "Enter Breaktime (mins)", "30", d, "number")
 btn("Calculate Working Time", function () {
     let working_time = calc_working_time('time1', 'time2', 'break')
     alert(`${working_time} hours`)
