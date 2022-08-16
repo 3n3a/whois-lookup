@@ -1,6 +1,6 @@
 import { Paper, Text } from "@mantine/core"
 
-export default function TimeOutput({ output }) {
+export default function TimeOutput({ unit, output }) {
     return (
         <>
             <Paper shadow="xs" p="md">
@@ -9,7 +9,7 @@ export default function TimeOutput({ output }) {
                     size="xl"
                     weight="700"
                     >
-                    {output}
+                    {output} {unit}
                 </Text>
             </Paper>
         </>
