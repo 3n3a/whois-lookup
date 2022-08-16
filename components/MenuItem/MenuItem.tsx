@@ -1,7 +1,8 @@
 import { Button } from '@mantine/core';
 import Link from 'next/link';
 
-export function MenuItem({name, link}) {
+//@ts-ignore
+export function MenuItem({ name, link }) {
     return (
         <>
             <Link href={link}>

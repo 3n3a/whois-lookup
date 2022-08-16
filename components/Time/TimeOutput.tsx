@@ -1,5 +1,7 @@
 import { Paper, Text } from "@mantine/core"
 
+
+//@ts-ignore
 export default function TimeOutput({ unit, output }) {
     return (
         <>
@@ -7,7 +9,7 @@ export default function TimeOutput({ unit, output }) {
                 <Text
                     align="center"
                     size="xl"
-                    weight="700"
+                    weight="bolder"
                     >
                     {output} {unit}
                 </Text>

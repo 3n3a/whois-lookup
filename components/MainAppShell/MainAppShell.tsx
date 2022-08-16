@@ -15,6 +15,7 @@ import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
 import {MenuItem} from '../MenuItem/MenuItem'
 
 
+//@ts-ignore
 export function MainAppShell({children}) {
   const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
