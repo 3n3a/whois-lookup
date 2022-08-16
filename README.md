@@ -1,36 +1,19 @@
-# calc-time
+# Time Calculator
 
-Empty project.
+## Goals
 
-## Building and running on localhost
-
-First install dependencies:
-
-```sh
-npm install
-```
-
-To create a production build:
-
-```sh
-npm run build-prod
-```
-
-To create a development build:
-
-```sh
-npm run build-dev
-```
-
-## Development Mode
-
-```sh
-npm run dev
-```
+* When do I get off, by starting at Time X
+  * just Add X hours to starting Time
+* When do I have to start, to get off at Time X
+  * subtract X hours from End Time
+* How many hours us between X and Y
+  * (already): Diff between start and end
 
 
-## Production Mode
+## Todo
 
-```sh
-npm run prod
-```
+- [ ] Get off calc
+- [ ] Get in calc
+- [x] Time between calc
+- [ ] Configurable, saveable state, hours in work day
+- [ ] Add lunch break in between
