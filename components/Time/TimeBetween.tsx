@@ -4,11 +4,10 @@ import { Stack, Title } from '@mantine/core';
 
 import TimeControls from './TimeControls';
 import TimeOutput from './TimeOutput';
-import { Config } from '../Config';
-import App from './App';
+import { Config } from './_Config';
 
 
-export default function TimeBetween() {
+export function TimeBetween() {
 	const defaultStart = Config.dayjs("07:30", Config.timeFormat).toDate();
 	const defaultEnd = Config.dayjs("17:00", Config.timeFormat).toDate();
   

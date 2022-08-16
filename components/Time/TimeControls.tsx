@@ -3,7 +3,7 @@ import { Stack } from "@mantine/core";
 
 import { TimeInput } from "@mantine/dates";
 
-import {Clock} from "tabler-icons-react";
+import {IconClock} from "@tabler/icons"
 
 export default function TimeControls({ value, onChange }) {
 
@@ -22,8 +22,8 @@ export default function TimeControls({ value, onChange }) {
   return (
     <>
       <Stack>
-        <TimeInput label="Start Time" value={time[0]} format='24' locale='de-ch' icon={<Clock size={16} />} onChange={updateStart}></TimeInput>
-        <TimeInput label="End Time" value={time[1]} format='24' locale='de-ch' icon={<Clock size={16} />} onChange={updateEnd}></TimeInput>
+        <TimeInput label="Start Time" value={time[0]} format='24' locale='de-ch' icon={<IconClock size={16} />} onChange={updateStart}></TimeInput>
+        <TimeInput label="End Time" value={time[1]} format='24' locale='de-ch' icon={<IconClock size={16} />} onChange={updateEnd}></TimeInput>
       </Stack>
     </>
   );
