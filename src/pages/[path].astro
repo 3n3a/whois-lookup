@@ -1,0 +1,10 @@
+---
+import App from "../components/App";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const {pathname} = Astro.url
+---
+
+<BaseLayout>
+	<App client:visible path={pathname}></App>
+</BaseLayout>
