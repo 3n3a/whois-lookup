@@ -1,11 +1,19 @@
-# Astro + Preact Example
+# Time Calculator
 
-```
-npm init astro -- --template framework-preact
-```
+## Goals
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/framework-preact)
+* When do I get off, by starting at Time X
+  * just Add X hours to starting Time
+* When do I have to start, to get off at Time X
+  * subtract X hours from End Time
+* How many hours us between X and Y
+  * (already): Diff between start and end
 
-This example showcases Astro working with [Preact](https://preactjs.com).
 
-Write your Preact components as `.jsx` or `.tsx` files in your project.
+## Todo
+
+- [ ] Get off calc
+- [ ] Get in calc
+- [x] Time between calc
+- [ ] Configurable, saveable state, hours in work day
+- [ ] Add lunch break in between
