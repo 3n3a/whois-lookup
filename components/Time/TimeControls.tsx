@@ -25,15 +25,18 @@ export default function TimeControls({ value, onChange }) {
 
   //@ts-ignore
   const updateBreak = breakTime => {
+    if (!breakTime || breakTime <= 0) breakTime = 0
+      
     setTime((c) => ([c[0], c[1], breakTime]))
     onChange([time[0], time[1], breakTime])
+    
   }
 
   return (
     <>
       <Stack>
         <TimeInput label="Start Time" value={time[0]} format='24' icon={<IconClock size={16} />} onChange={updateStart}></TimeInput>
-        <ManualTimeInput unit='min' value={time[2]} onChange={updateBreak}></ManualTimeInput>
+        <ManualTimeInput value={time[2]} onChange={updateBreak}></ManualTimeInput>
         <TimeInput label="End Time" value={time[1]} format='24' icon={<IconClock size={16} />} onChange={updateEnd}></TimeInput>
       </Stack>
     </>

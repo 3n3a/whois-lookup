@@ -1,21 +1,14 @@
 import { Text, TextInput } from "@mantine/core";
 
-export function ManualTimeInput({ unit, value, onChange }) {
-    
-    function unitPart(): JSX.Element {
-        return (
-            <Text>{unit}</Text>
-        );
-    }
+//@ts-ignore
+export function ManualTimeInput({ value, onChange }) {
     
     return (
         <>
           <TextInput
       type="number"
-      placeholder="30"
-      label="Enter break tome"
-      rightSection={unitPart}
-      rightSectionWidth={92}
+      placeholder="30 min"
+      label="Enter break time"
       value={value}
       onChange={onChange}
     />

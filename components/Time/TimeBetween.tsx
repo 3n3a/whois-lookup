@@ -13,12 +13,13 @@ export function TimeBetween() {
   
 	const [time, setTime] = useState<[Date, Date, Number]>([defaultStart, defaultEnd, 30])
 
+	// todo: maybe calculate time into state :)
 	return (
 			<Stack>
 				<Title order={1}>Time between</Title>
 				<TimeControls value={time} onChange={setTime}></TimeControls>
 				<TimeOutput unit='hours' output={
-					Config.dayjs(time[1]).subtract(time[2] || 0, 'minute').diff(Config.dayjs(time[0]), 'hours', true).toFixed(2)
+					Config.dayjs(time[1]).subtract(time[2], 'minute').diff(Config.dayjs(time[0]), 'hours', true).toFixed(2)
 				}></TimeOutput>
 			</Stack>
 	);
