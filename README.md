@@ -16,4 +16,4 @@
 - [ ] Get in calc
 - [x] Time between calc
 - [ ] Configurable, saveable state, hours in work day
-- [ ] Add lunch break in between
+- [x] Add lunch break in between
