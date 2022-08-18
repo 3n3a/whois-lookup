@@ -1,0 +1,10 @@
+
+tasks:
+  - init: yarn install && yarn run build
+    command: yarn run dev
+
+
+
+vscode:
+  extensions:
+    - astro-build.astro-vscode
