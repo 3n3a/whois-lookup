@@ -9,7 +9,7 @@ import { ManualTimeInput } from "./ManualTimeInput";
 //@ts-ignore
 export default function TimeControls({ value, onChange }) {
 
-  const [time, setTime] = useState<[Date, Date, Number]>(value)
+  const [time, setTime] = useState<[Date, Date, String]>(value)
 
   //@ts-ignore
   const updateStart = start => {
@@ -24,12 +24,10 @@ export default function TimeControls({ value, onChange }) {
   }
 
   //@ts-ignore
-  const updateBreak = breakTime => {
-    if (!breakTime || breakTime <= 0) breakTime = 0
-      
+  const updateBreak = breakTime => {      
     setTime((c) => ([c[0], c[1], breakTime]))
     onChange([time[0], time[1], breakTime])
-    
+
   }
 
   return (
