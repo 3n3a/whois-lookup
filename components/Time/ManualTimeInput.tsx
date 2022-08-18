@@ -1,4 +1,4 @@
-import { Select } from "@mantine/core";
+import { NumberInput, Select } from "@mantine/core";
 
 //@ts-ignore
 export function ManualTimeInput({ value, onChange }) {
@@ -12,7 +12,7 @@ export function ManualTimeInput({ value, onChange }) {
     
     return (
         <>
-          <Select label="Break Time" data={values} value={value} onChange={onChange} />
+          <NumberInput value={value} onChange={onChange} />
         </>
     )
 }

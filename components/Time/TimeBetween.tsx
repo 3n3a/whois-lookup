@@ -20,7 +20,7 @@ export function TimeBetween() {
 	const defaultStart = Config.dayjs("07:30", Config.timeFormat).toDate();
 	const defaultEnd = Config.dayjs("17:00", Config.timeFormat).toDate();
   
-	const [time, setTime] = useState<[Date, Date, String]>([defaultStart, defaultEnd, '30'])
+	const [time, setTime] = useState<[Date, Date, Number]>([defaultStart, defaultEnd, 30])
 
 	
 
