@@ -7,7 +7,7 @@ module.exports = withBundleAnalyzer({
   eslint: {
     ignoreDuringBuilds: true,
   },
-  async redirects() {
+  /*async redirects() {
     return [
       {
         source: '/',
@@ -15,5 +15,5 @@ module.exports = withBundleAnalyzer({
         permanent: true,
       },
     ]
-  },
+  },*/
 });
