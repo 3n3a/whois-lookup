@@ -1,6 +1,19 @@
 import {redirectList} from '../../rdap-list';
 import {parse_host} from '../../extract-tld';
 
+var config = {
+  configurable: true,
+  value: function() {
+    var alt = {};
+    var storeKey = function(key) {
+      alt[key] = this[key];
+    };
+    Object.getOwnPropertyNames(this).forEach(storeKey, this);
+    return alt;
+  }
+};
+Object.defineProperty(Error.prototype, 'toJSON', config);
+
 function getRdapServer(domainName) {
   let tld;
   try {
