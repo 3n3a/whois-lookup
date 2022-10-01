@@ -15,7 +15,7 @@ export async function onRequestGet({ params }) {
     let result;
     try {
       const [success, rdapUrl] = getRdapServer(params.id);
-      if (!success) return new Response(JSON.stringify(rdapUrl, null, 2), { status: 500 });
+      //if (!success) return new Response(JSON.stringify(rdapUrl, null, 2), { status: 500 });
       const res = await fetch(`${rdapUrl}domain/${params.id}`);
       const data = await res.json();
       const info = JSON.stringify(data, null, 2);
