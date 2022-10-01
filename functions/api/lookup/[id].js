@@ -7,10 +7,14 @@ function getRdapServer(domainName) {
 }
 
 export async function onRequestGet({ params }) {
-    const rdapUrl = getRdapServer(params.id);
-    const res = await fetch(`https://${rdapUrl}/domain/${params.id}`);
-    const data = await res.json();
-    const info = JSON.stringify(data, null, 2);
-    return new Response(info);
+    try {
+      const rdapUrl = getRdapServer(params.id);
+      const res = await fetch(`https://${rdapUrl}/domain/${params.id}`);
+      const data = await res.json();
+      const info = JSON.stringify(data, null, 2);
+      return new Response(info);
+    } catch (e) {
+      return new Response(JSON.stringify(e, null, 2), { status: 500 });
+    }
   }
   
