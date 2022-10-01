@@ -2,12 +2,12 @@ import {redirectList} from '../../rdap-list';
 import {parse_host} from '../../extract-tld';
 
 function getRdapServer(domainName) {
-  let tld;
-  try {
+  let tld = "ch";
+  /*try {
    tld = parse_host(domainName).tld;
   } catch (e) {
    return [false, {line: "getRdapSrrver", message: e.message, stack: e.hasOwnProperty("stack") ? e.stack : "", }];
-  }
+  }*/
   return [true, redirectList[tld]];
 }
 
