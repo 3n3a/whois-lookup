@@ -2,19 +2,28 @@ import {redirectList} from '../../rdap-list';
 import {parse_host} from '../../extract-tld';
 
 function getRdapServer(domainName) {
-  const tld = parse_host(domainName).tld;
-  return redirectList[tld];
+  let tld;
+  try {
+   tld = parse_host(domainName).tld;
+  }
+  catch (e) {
+   return [false, e];
+  }
+  return [true, redirectList[tld]];
 }
 
 export async function onRequestGet({ params }) {
+    let result;
     try {
-      const rdapUrl = getRdapServer(params.id);
+      const [success, rdapUrl] = getRdapServer(params.id);
+      if (!success) return new Response(JSON.stringify(rdapUrl, null, 2), { status: 500 });
       const res = await fetch(`https://${rdapUrl}/domain/${params.id}`);
       const data = await res.json();
       const info = JSON.stringify(data, null, 2);
-      return new Response(info);
+      result = new Response(info);
     } catch (e) {
-      return new Response(JSON.stringify(e, null, 2), { status: 500 });
+      result = new Response(JSON.stringify(e, null, 2), { status: 500 });
     }
+    return result;
   }
   
