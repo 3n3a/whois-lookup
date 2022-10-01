@@ -28,11 +28,11 @@ export function MainAppShell({children}) {
       }}
       navbarOffsetBreakpoint="sm"
       asideOffsetBreakpoint="sm"
-      navbar={
-        <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg: 300 }}>
-          <MenuItem name='Time Between' link='/between' />
-        </Navbar>
-      }
+      // navbar={
+      //   <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg: 300 }}>
+      //     <MenuItem name='Home' link='/' />
+      //   </Navbar>
+      // }
       footer={
         <Footer height={60} p="md">
           Copyright © Enea "3n3a" Krähenbühl
@@ -52,7 +52,7 @@ export function MainAppShell({children}) {
             </MediaQuery>
 
             <Title order={1}>
-              Time Utility
+              Whois Lookup
             </Title>
 
             <ColorSchemeToggle></ColorSchemeToggle>

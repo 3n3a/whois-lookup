@@ -1,12 +1,10 @@
-import { GetServerSidePropsContext } from 'next';
-import { useState } from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { MantineProvider, ColorScheme, ColorSchemeProvider } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
 import { useLocalStorage } from '@mantine/hooks';
-import {MainAppShell} from '../components/MainAppShell/MainAppShell';
-
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { MainAppShell } from '../components/MainAppShell/MainAppShell';
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;
@@ -19,11 +17,12 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const toggleColorScheme = (value?: ColorScheme) =>
     setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
 
+  const queryClient = new QueryClient();
 
   return (
     <>
       <Head>
-        <title>WHOIS</title>
+        <title>Whois Lookup</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <link rel="shortcut icon" href="/favicon.svg" />
       </Head>
@@ -32,7 +31,9 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
           <NotificationsProvider>
             <MainAppShell>
-              <Component {...pageProps} />
+              <QueryClientProvider client={queryClient}>
+                <Component {...pageProps} />
+              </QueryClientProvider>
             </MainAppShell>
           </NotificationsProvider>
         </MantineProvider>
