@@ -191,6 +191,7 @@ export const redirectList = {
       "cern": "https://rdap.afilias-srs.net/rdap/cern/",
       "cfa": "https://tld-rdap.verisign.com/cfa/v1/",
       "cfd": "https://rdap.centralnic.com/cfd/",
+      "li": "https://rdap.nic.ch/",
       "ch": "https://rdap.nic.ch/",
       "chanel": "https://tld-rdap.verisign.com/chanel/v1/",
       "channel": "https://www.registry.google/rdap/",
