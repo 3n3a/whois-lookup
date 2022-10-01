@@ -9,7 +9,7 @@ export function WhoisLookup() {
     const [domain, setDomain] = useState('');
     const [validDomain, setValidDomain] = useState(false);
 
-    const [debouncedValidity] = useDebouncedValue(validDomain, 400);
+    const [debouncedValidity] = useDebouncedValue(validDomain, 600);
     const [debouncedDomain] = useDebouncedValue(domain, 400);
 
     const setDomainAndValidity = (domainName: string) => {
