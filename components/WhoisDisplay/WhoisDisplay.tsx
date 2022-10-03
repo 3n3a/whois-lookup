@@ -112,7 +112,7 @@ function getRowElements(json: object) {
   // @ts-ignore
   const registrar = json.entities.map(
     // @ts-ignore
-    (entity: object) => {
+    (entity: any) => {
       // @ts-ignore
       // eslint-disable-next-line no-param-reassign
       entity.info = getRegistrar(entity.vcardArray[1]);
