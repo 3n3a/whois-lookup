@@ -58,7 +58,8 @@ function getRegistrar(vcard: any) {
   };
 }
 
-function getRegistrarTable(info: object) {
+// @ts-ignore
+function getRegistrarTable(info: any) {
   return (
     <Table>
       <thead>
