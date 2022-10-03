@@ -151,7 +151,7 @@ export function WhoisDisplay({ domainName, domainValid }: Props) {
   return (
     <Paper shadow="xs" p="md" withBorder style={{ minHeight: 200, position: 'relative' }}>
       <LoadingOverlay visible={domainValid && (isLoading || isFetching)} overlayBlur={2} />
-      <Title size="h4">Domain: { domainName }</Title>
+      <Title>Domain: { domainName }</Title>
       { domainValid && isError
         ? <TextError value={errorMessage} />
         : data
