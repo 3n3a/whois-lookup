@@ -98,7 +98,7 @@ function getRegistrarTable(info: any) {
             Url
           </td>
           <td>
-            <a href={info.url} alt={info.url}>{info.url}</a>
+            <a href={info.url}>{info.url}</a>
           </td>
         </tr>
       </tbody>
