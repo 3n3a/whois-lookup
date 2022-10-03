@@ -2,14 +2,17 @@ import {redirectList} from '../../rdap-list';
 import {parse_host} from '../../extract-tld';
 
 function getRdapServer(domainName) {
-  let tld_res = parse_host(domainName);
-  return [true, redirectList[tld_res.tld]];
+  let { tld } = parse_host(domainName);
+  if (redirectList.hasOwnProperty(tld)) return [true, redirectList[tld]];
+  return [false, {}];
 }
 
 export async function onRequestGet({ params }) {
     let result;
     try {
       const [success, rdapUrl] = getRdapServer(params.id);
+      if (!success) return new Response(JSON.stringify({"error": "Error. No RDAP Server for this TLD found.", "tld": params.id}));
+
       const res = await fetch(`${rdapUrl}domain/${params.id}`);
       const data = await res.json();
       const info = JSON.stringify(data, null, 2);

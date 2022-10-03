@@ -41,6 +41,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "wrangler": "^2.1.9",
     "@babel/core": "^7.17.8",
     "@next/eslint-plugin-next": "^12.1.4",
     "@storybook/react": "^6.5.9",
