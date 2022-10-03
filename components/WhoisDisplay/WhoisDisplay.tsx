@@ -1,3 +1,4 @@
+// @ts-ignore-file
 /* eslint-disable no-plusplus */
 import { Title, Table, Paper, LoadingOverlay } from '@mantine/core';
 import { useQuery } from '@tanstack/react-query';
