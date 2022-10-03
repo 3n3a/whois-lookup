@@ -59,7 +59,7 @@ function getRegistrar(vcard: any) {
 
 function getRegistrarTable(info: object) {
   return (
-    <Table withBorder withColumnsBorder>
+    <Table>
       <thead>
         <tr>
           <th />
@@ -153,7 +153,7 @@ export function WhoisDisplay({ domainName, domainValid }: Props) {
       { domainValid && isError
         ? <TextError value={errorMessage} />
         : data
-        ? <Table withBorder horizontalSpacing={'xs'}>
+        ? <Table horizontalSpacing="xs">
             <thead>
               <tr>
                 <th />
