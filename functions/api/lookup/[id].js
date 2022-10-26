@@ -7,11 +7,16 @@ function getRdapServer(domainName) {
   return [false, {}];
 }
 
-export async function onRequestGet({ params }) {
+export async function onRequestGet({ params, env }) {
     let result;
     try {
       const [success, rdapUrl] = getRdapServer(params.id);
-      if (!success) return new Response(JSON.stringify({"error": "Error. No RDAP Server for this TLD found.", "tld": params.id}));
+      if (!success) {
+        const res = await fetch(`${env.WHOIS_API}/whois?name=${params.id}`);
+        const data = await res.json();
+        const info = JSON.stringify(data, null, 2);
+        result = new Response(info);
+      }
 
       const res = await fetch(`${rdapUrl}domain/${params.id}`);
       const data = await res.json();
