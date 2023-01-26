@@ -21,7 +21,7 @@
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/server": "^11.4.0",
-    "@mantine/carousel": "5.10.1",
+    "@mantine/carousel": "5.10.2",
     "@mantine/core": "5.10.1",
     "@mantine/dates": "5.10.1",
     "@mantine/hooks": "5.10.1",
