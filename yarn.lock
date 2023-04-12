@@ -5535,9 +5535,7 @@ elliptic@^6.5.3:
     minimalistic-crypto-utils "^1.0.1"
 
 embla-carousel-react@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.npmjs.org/embla-carousel-react/-/embla-carousel-react-7.0.0.tgz"
-  integrity sha512-y17TYtqvvziWbDwwfX5dh8n4qU1luytz4+6WWMBnR4pJfLfkKBGsqYNZ4WhmAgUcYL1Uliti8Cjg+NJd46MPxw==
+  version "7.1.0"
   dependencies:
     embla-carousel "7.0.0"
 
