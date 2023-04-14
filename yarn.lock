@@ -2799,9 +2799,7 @@
     tslib "^2.0.0"
 
 "@storybook/react@^6.5.9":
-  version "6.5.9"
-  resolved "https://registry.npmjs.org/@storybook/react/-/react-6.5.9.tgz"
-  integrity sha512-Rp+QaTQAzxJhwuzJXVd49mnIBLQRlF8llTxPT2YoGHdrGkku/zl/HblQ6H2yzEf15367VyzaAv/BpLsO9Jlfxg==
+  version "6.5.16"
   dependencies:
     "@babel/preset-flow" "^7.12.1"
     "@babel/preset-react" "^7.12.10"
