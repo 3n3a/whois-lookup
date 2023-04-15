@@ -11021,9 +11021,7 @@ storybook-addon-turbo-build@^1.1.0:
     esbuild-loader "^2.10.0"
 
 storybook-dark-mode@^2.0.0:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/storybook-dark-mode/-/storybook-dark-mode-2.0.5.tgz#a15e8a43bf4b60745f73fd362133ba565a3bc61e"
-  integrity sha512-egOMu2tgGttGAMtFZcDLZobs1xc7LzFOh+pRVqaW59AVp05ABdQ3Hj6IX2Pz7tYGmF9AmaK+nBv0hDFxPe7Hfg==
+  version "2.1.1"
   dependencies:
     "@storybook/addons" "^6.5.14"
     "@storybook/api" "^6.5.14"
