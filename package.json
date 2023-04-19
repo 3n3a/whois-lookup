@@ -44,7 +44,7 @@
     "wrangler": "^2.1.9",
     "@babel/core": "^7.17.8",
     "@next/eslint-plugin-next": "^13.0.0",
-    "@storybook/react": "^6.5.9",
+    "@storybook/react": "^7.0.0",
     "@testing-library/dom": "^9.0.0",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^13.0.0",
